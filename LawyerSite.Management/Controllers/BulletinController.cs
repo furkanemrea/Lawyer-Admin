@@ -23,7 +23,7 @@ namespace LawyerSite.Management.Controllers
         public async Task<EntityResponse<Bulletins>> CreateNewBulletin(Bulletins bulletins)
         {
             return await _bulletinBusiness.CreateBulletin(bulletins);
-        }
+        } 
         public async Task<IActionResult> ListBulletin()
         {
             return View((await _bulletinBusiness.ListBulletins()).RelatedEntity);
