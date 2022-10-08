@@ -33,7 +33,7 @@ namespace EntityLayer.EntityLibrary
 
                 entity.Property(e => e.Description).HasColumnType("text");
 
-                entity.Property(e => e.Title).HasMaxLength(4000);
+                entity.Property(e => e.Title).HasMaxLength(4000); 
 
                 entity.HasOne(d => d.Blog)
                     .WithMany(p => p.BlogContents)
@@ -54,9 +54,7 @@ namespace EntityLayer.EntityLibrary
             modelBuilder.Entity<Blogs>(entity =>
             {
                 entity.Property(e => e.CreatedOn).HasColumnType("datetime");
-
                 entity.Property(e => e.Description).HasColumnType("text");
-
                 entity.Property(e => e.DisplayedDate).HasColumnType("date");
 
                 entity.Property(e => e.Title).HasMaxLength(500);
@@ -88,6 +86,7 @@ namespace EntityLayer.EntityLibrary
             });
 
             OnModelCreatingPartial(modelBuilder);
+
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

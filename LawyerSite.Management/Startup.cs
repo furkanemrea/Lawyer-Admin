@@ -30,8 +30,7 @@ namespace LawyerSite.Management
         
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            services.AddDbContext<LawyersitedbContext>(i => i.UseSqlServer(@"Data Source=.;Initial Catalog=LawyerSiteDB;Integrated Security=True"));
+            services.AddDbContext<LawyersitedbContext>(i => i.UseSqlServer(@"Host=89.252.184.189;Port=5432;Database=LawyersiteDB;User Id=bittibitti;Password=159357;"));
             services.AddScoped<ISystemUserBusiness, SystemUserBusiness>();
             services.AddScoped<IBlogBusiness, BlogBusiness>();
             services.AddScoped<IBlogContentBusiness, BlogContentBusiness>();
